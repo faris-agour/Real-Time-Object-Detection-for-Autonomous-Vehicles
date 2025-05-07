@@ -53,3 +53,11 @@ jobs:
         resource-group: ${{ env.RESOURCE_GROUP }}
         publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
         package: ./app.zip
+        
+    - name: Cache pip packages
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
