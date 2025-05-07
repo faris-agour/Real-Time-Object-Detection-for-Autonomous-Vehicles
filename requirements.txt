@@ -1,11 +1,8 @@
-matplotlib==3.10.1
-mlflow==2.22.0
-opencv_python==4.11.0.86
-pandas==2.2.3
-Pillow==11.2.1
-torch==2.6.0+cu118
 ultralytics==8.3.107
-numpy
-tqdm
-pyyaml
-scipy
+opencv-python-headless==4.11.0.86  # Lighter than opencv_python
+Pillow==11.2.1
+torch==2.6.0+cpu  # CPU-only version
+numpy==1.26.4  # Pinned version
+fastapi==0.111.0
+uvicorn==0.29.0
+python-multipart==0.0.9
